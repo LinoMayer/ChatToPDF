@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: "Chat With PDF",
@@ -16,7 +17,10 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className="min-h-screen h-screen overflow-hidden flex flex-col">{children}</body>
+        <body className="min-h-screen h-screen overflow-hidden flex flex-col">
+          {children}
+          <SpeedInsights/>
+          </body>
       </html>
     </ClerkProvider>
   );

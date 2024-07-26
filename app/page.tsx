@@ -10,8 +10,6 @@ import {
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-
-
 const features = [
   {
     name: "Store Your PDF Documents",
@@ -67,19 +65,20 @@ export default function Home() {
             </h2>
 
             <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Transoform Your PDFs into Interactive Conversations
+              Transform Your PDFs into Interactive Conversations
             </p>
 
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Introducing{""} <span className="font-bold text-indigo-600">Chat With PDF</span>
+              Introducing{" "}
+              <span className="font-bold text-indigo-600">Chat With PDF</span>
               <br />
               <br />
-              Upload your document, and our chatbot will anser questions,
-              summarize content and answer all your Questions. Ideal for
-              everyone, <span className="text-indigo-600">Chat With PDF</span>
-              {""} turns static documents into {""}
+              Upload your document, and our chatbot will answer questions,
+              summarize content, and answer all your questions. Ideal for
+              everyone, <span className="text-indigo-600">Chat With PDF</span>{" "}
+              turns static documents into{" "}
               <span className="font-bold">dynamic conversations</span>,
-              enhancing productivity 10x fold effortlessly.
+              enhancing productivity tenfold effortlessly.
             </p>
           </div>
 
@@ -103,18 +102,18 @@ export default function Home() {
           </div>
         </div>
     
-        <div className="mx-auto mt-16 max-w-7xl px-6 sm:tm-20 md:mt-24 lg:px-8">
+        <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
           <dl className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-600 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
-            {features.map(features => (
-              <div key={features.name} className="relative pl-9">
+            {features.map((feature) => (
+              <div key={feature.name} className="relative pl-9">
                 <dt className="inline font-semibold text-gray-900">
-                  <features.icon 
+                  <feature.icon 
                     aria-hidden="true"
                     className="absolute left-1 top-1 h-5 w-5 text-indigo-600"
                   />
                 </dt>
 
-                <dd>{features.description}</dd>
+                <dd>{feature.description}</dd>
               </div>
             ))}
           </dl>
